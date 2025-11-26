@@ -1,0 +1,11 @@
+#include "resource.h"
+
+// Main application icon
+IDI_APPICON ICON "images\\app.ico"
+
+// Splash screen image (bitmap)
+IDB_SPLASH BITMAP "images\\splash.bmp"
+
+// Optional custom cursor
+// Uncomment the line below if you add the cursor file
+// IDC_CUSTOMCURSOR CURSOR "custom.cur"

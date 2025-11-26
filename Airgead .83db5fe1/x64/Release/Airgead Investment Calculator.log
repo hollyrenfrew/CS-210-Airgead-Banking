@@ -1,0 +1,10 @@
+﻿  DataCalculation.cpp
+  InvestmentData.cpp
+  UserInterface.cpp
+  main.cpp
+  SplashScreen.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 350 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Airgead Investment Calculator.vcxproj -> C:\Users\holly\source\repos\Airgead Investment Calculator\x64\Release\Airgead Investment Calculator.exe
