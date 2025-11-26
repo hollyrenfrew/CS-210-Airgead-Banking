@@ -1,31 +1,68 @@
-Congratulations! You have completed the interview process and have been hired as a junior developer at Chada Tech. 
-Now that you have successfully completed your new-hire orientation and have been introduced to the rest of your team, 
-you are ready to jump in and start working on your first project.
+# Airgead Banking Investment Calculator
 
-You are asked to collaborate with Airgead Banking, one of Chada Tech’s clients. Airgead Banking is well known in the 
-community. They often sponsor schools and have recently decided to partner with the local high school to develop a program 
-that will teach students the concepts of fiscal responsibility (such as living within their means and spending less than 
-they make) via an interactive system. The initial focus for this project will be on investing and the power of compound 
-interest. You will develop an application that allows users to see how their investments will grow over time. Airgead Banking 
-has provided you with a list of functional requirements that describe what they need their application to do.
+This project is an enhanced version of the Airgead Banking Investment Calculator developed for the CS-210 course. It serves as an example of applying algorithms and data structures to solve real-world problems in financial forecasting.
 
------------------------------------------------------------------------------------------------------------------------------
+## Category Two: Algorithms and Data Structures
 
-1. ) Review the Airgead Banking App Functional Requirements, located in the Supporting Materials section. Create pseudocode or a flowchart 
-to plan your coding project. Outline your code step-by-step so that you can use it as a guide when coding. This will be submitted along 
-with your zipped application.
+### Artifact Selection and Origin
 
-      a.) Do not write code yet. You will do that in Step 3. For this step, write your thoughts in English of what the program should do.
-      b.) Don’t be concerned with syntax, just list statements, each describing a single action.
-      c.) List all steps.
-      d.) Use proper naming conventions.
-      e.) Keep it simple—use only one statement per line.
-   
-2.) Develop an object-oriented programming (OOP) application using secure and efficient C++ code. Make sure that your application:
- 	a.) Meets all specifications listed in the Airgead Banking App Functional Requirements
-	b.) Follows best practices described in the Airgead Banking Standards document
-	c.) Includes in-line comments
- 
-3.) When your solution is finished, zip your project including all components (CPP, H, and any other files used).
+The selected artifact is the Airgead Banking Investment Calculator, originally developed as part of the CS-210 course curriculum. Its core functionality involves computing investment growth over a given number of years, factoring in monthly deposits and compound interest. This artifact was chosen because it provides an ideal platform for applying algorithmic principles and structured data storage.
 
-4.) Upload your zipped project file and pseudocode or flowchart to the project submission area.
+### Enhancement Plan
+
+To improve alignment with the algorithms and data structures category, the calculator's logic has been upgraded to use monthly compound interest calculations instead of simple annual calculations. The program now uses a dynamic data structure, specifically a vector of custom YearRecord structs, to store each year's results. This provides structured, scalable access to financial data.
+
+### Pseudocode for Enhanced Logic
+
+```
+balance = initial_investment
+monthlyRate = (annual_interest / 100) / 12
+results = empty vector
+
+for each year in total_years:
+    yearlyInterest = 0
+
+    for each month in 12:
+        balance += monthly_deposit
+        monthlyInterest = balance * monthlyRate
+        balance += monthlyInterest
+        yearlyInterest += monthlyInterest
+
+    store (year, balance, yearlyInterest) in vector
+```
+
+## Skill Demonstration and Course Outcome Alignment
+
+### Skills Demonstrated
+
+This enhancement demonstrates skills in algorithm design, data structure implementation, and modular development. Specifically:
+
+* Algorithm optimization for monthly compounding
+* Use of the vector container to store structured records
+* Refactoring for maintainability and clarity
+
+### Course Outcomes Met
+
+* Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution, while managing the trade-offs involved in design choices.
+* Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.
+
+## Build Instructions
+
+1. Open the solution in Visual Studio.
+2. Ensure that all `.cpp`, `.h`, and `resource.rc` files are included.
+3. Make sure you have linked `comctl32.lib` and `dwmapi.lib` under project properties.
+4. Press `Ctrl + Shift + B` to build.
+5. Run the `Airgead Investment Calculator.exe` from the output directory.
+
+## File Contents
+
+* main.cpp: Core application logic and UI
+* InvestmentData.h / .cpp: Holds user input and investment parameters
+* DataCalculation.h / .cpp: Performs the enhanced compound interest calculations
+* resource.h / .rc: Contains GUI assets like icons and splash screen
+
+## Notes
+
+* The application includes a splash screen with fade-in and fade-out effects
+* A true dark mode is available, featuring dark gray backgrounds and light gray text
+* The application logic has been enhanced to align with advanced data structure and algorithm requirements
