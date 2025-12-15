@@ -1,36 +1,36 @@
-\# Airgead Banking Investment Calculator
+# Airgead Banking Investment Calculator
 
 
 
-\## Overview
+## Overview
 
 
 
-The Airgead Banking Investment Calculator is a C++ application that models compound interest growth over time based on user-defined inputs such as initial investment, monthly deposits, interest rate, and number of years. The project was originally created as a console application for \*\*CS-210: Programming Languages\*\* and later enhanced for \*\*CS-499\*\* to demonstrate advanced algorithmic design, data structure usage, and professional software practices.
+The Airgead Banking Investment Calculator is a C++ application that models compound interest growth over time based on user-defined inputs such as initial investment, monthly deposits, interest rate, and number of years. The project was originally created as a console application for **CS-210: Programming Languages** and later enhanced for **CS-499** to demonstrate advanced algorithmic design, data structure usage, and professional software practices.
 
 
 
-\## Original Version
+## Original Version
 
 
 
 The original version:
 
-\- Used annual-only compound interest
+- Used annual-only compound interest
 
-\- Printed results directly to the console
+- Printed results directly to the console
 
-\- Did not store calculated data in structured containers
+- Did not store calculated data in structured containers
 
-\- Had limited validation and documentation
-
-
-
-The original implementation is preserved in the \*\*`original-release` branch\*\*.
+- Had limited validation and documentation
 
 
 
-\## CS‑499 Enhancements
+The original implementation is preserved in the **`original-release` branch**.
+
+
+
+## CS‑499 Enhancements
 
 
 
@@ -38,85 +38,87 @@ For the capstone, this project was significantly expanded:
 
 
 
-\### Algorithm Improvements
+### Algorithm Improvements
 
-\- Replaced annual-only compounding with \*\*monthly compound interest\*\*
+- Replaced annual-only compounding with **monthly compound interest**
 
-\- Used nested iteration with yearly aggregation
+- Used nested iteration with yearly aggregation
 
-\- Improved numerical accuracy and realism
+- Improved numerical accuracy and realism
 
 
 
-\### Data Structures
+### Data Structures
 
-\- Introduced `std::vector<YearRecord>` to store yearly results
+- Introduced `std::vector<YearRecord>` to store yearly results
 
-\- Used `vector::reserve()` for performance optimization
+- Used `vector::reserve()` for performance optimization
 
-\- Added:
+- Added:
 
 &nbsp; - `std::stack<double>` (LIFO)
 
 &nbsp; - `std::queue<double>` (FIFO)
 
-\- Implemented:
+- Implemented:
 
 &nbsp; - `std::sort()` (O(n log n))
 
-&nbsp; - `std::binary\_search()` (O(log n))
+&nbsp; - `std::binary_search()` (O(log n))
 
 
 
-\### Software Design
+### Software Design
 
-\- Refactored logic for modularity and readability
+- Refactored logic for modularity and readability
 
-\- Separated computation from presentation
+- Separated computation from presentation
 
-\- Added documentation for complex algorithms
-
-
-
-\## Skills Demonstrated
+- Added documentation for complex algorithms
 
 
 
-\- Algorithmic refinement and complexity analysis
-
-\- Proper data structure selection and optimization
-
-\- STL sorting and searching techniques
-
-\- Defensive programming
-
-\- Modular C++ design
+## Skills Demonstrated
 
 
 
-\## Course Outcome Alignment
+- Algorithmic refinement and complexity analysis
+
+- Proper data structure selection and optimization
+
+- STL sorting and searching techniques
+
+- Defensive programming
+
+- Modular C++ design
 
 
 
-\- \*\*Outcome 3:\*\* Algorithm design and evaluation
-
-\- \*\*Outcome 4:\*\* Use of well-founded computing techniques
-
-\- \*\*Outcome 2:\*\* Professional communication via structured output
+## Course Outcome Alignment
 
 
 
-\## Repository Notes
+- **Outcome 3:** Algorithm design and evaluation
+
+- **Outcome 4:** Use of well-founded computing techniques
+
+- **Outcome 2:** Professional communication via structured output
 
 
 
-\- `main` branch: enhanced version
-
-\- `original-release` branch: original CS‑210 submission
+## Repository Notes
 
 
 
-\## Reflection
+- `main` branch: combination and documentation of releases
+
+- `enhanced-release` branch: enhanced version
+
+- `original-release` branch: original CS‑210 submission
+
+
+
+## Reflection
 
 
 
