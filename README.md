@@ -1,68 +1,61 @@
 # Airgead Banking Investment Calculator
 
-This project is an enhanced version of the Airgead Banking Investment Calculator developed for the CS-210 course. It serves as an example of applying algorithms and data structures to solve real-world problems in financial forecasting.
+## Overview
 
-## Category Two: Algorithms and Data Structures
+The Airgead Banking Investment Calculator is a C++ application that calculates and displays compound interest growth over time based on user inputs, including monthly deposits, interest rate, and investment duration. Originally created for **CS-210: Programming Languages**, this project evolved into a full desktop application with both algorithmic and UI enhancements.
 
-### Artifact Selection and Origin
+## Original Functionality
 
-The selected artifact is the Airgead Banking Investment Calculator, originally developed as part of the CS-210 course curriculum. Its core functionality involves computing investment growth over a given number of years, factoring in monthly deposits and compound interest. This artifact was chosen because it provides an ideal platform for applying algorithmic principles and structured data storage.
+- Prompted user for:
+  - initial investment
+  - monthly deposit
+  - annual interest rate
+  - number of years
+- Calculated yearly compound interest
+- Printed two formatted reports:
+  - Without monthly deposits
+  - With monthly deposits
 
-### Enhancement Plan
+## Enhancements (CS‑499)
 
-To improve alignment with the algorithms and data structures category, the calculator's logic has been upgraded to use monthly compound interest calculations instead of simple annual calculations. The program now uses a dynamic data structure, specifically a vector of custom YearRecord structs, to store each year's results. This provides structured, scalable access to financial data.
+For my CS‑499 capstone, I expanded this project to demonstrate algorithm refinement and data structure usage:
 
-### Pseudocode for Enhanced Logic
+### ✨ Key Enhancements
 
-```
-balance = initial_investment
-monthlyRate = (annual_interest / 100) / 12
-results = empty vector
+- **Monthly Compound Interest Algorithm**
+  - Replaced annual-only calculation
+  - Uses nested loops and yearly aggregation
+- **Dynamic Data Structure**
+  - Results stored in `std::vector<YearRecord>`
+  - Used `reserve()` for performance optimization
+- **Sorting and Searching**
+  - Used `std::sort` and `std::binary_search` with custom comparators
+- **Auxiliary Structures**
+  - Introduced `queue<double>` (FIFO) and `stack<double>` (LIFO) for transaction history
+- **Windows GUI**
+  - Light/Dark theme toggle
+  - Splash screen and custom app icon
+  - Live‑updating results table
 
-for each year in total_years:
-    yearlyInterest = 0
+## Skills Demonstrated
 
-    for each month in 12:
-        balance += monthly_deposit
-        monthlyInterest = balance * monthlyRate
-        balance += monthlyInterest
-        yearlyInterest += monthlyInterest
+- Algorithm refinement and complexity analysis
+- Use of STL containers (`vector`, `stack`, `queue`)
+- Sorting and search implementation
+- Separation of logic and UI
+- Modular software structure
 
-    store (year, balance, yearlyInterest) in vector
-```
+## Course Outcome Alignment
 
-## Skill Demonstration and Course Outcome Alignment
+- **Outcome 3:** Design and evaluate computing solutions using algorithmic principles  
+- **Outcome 4:** Use well‑founded techniques in computing practices  
+- **Outcome 2:** Professional presentation and user‑oriented output
 
-### Skills Demonstrated
+## Reflections
 
-This enhancement demonstrates skills in algorithm design, data structure implementation, and modular development. Specifically:
+Enhancing this project deepened my understanding of:
+- Monthly vs. annual compounding
+- How data structures impact performance
+- Bridging core logic with a usable GUI
 
-* Algorithm optimization for monthly compounding
-* Use of the vector container to store structured records
-* Refactoring for maintainability and clarity
-
-### Course Outcomes Met
-
-* Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution, while managing the trade-offs involved in design choices.
-* Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.
-
-## Build Instructions
-
-1. Open the solution in Visual Studio.
-2. Ensure that all `.cpp`, `.h`, and `resource.rc` files are included.
-3. Make sure you have linked `comctl32.lib` and `dwmapi.lib` under project properties.
-4. Press `Ctrl + Shift + B` to build.
-5. Run the `Airgead Investment Calculator.exe` from the output directory.
-
-## File Contents
-
-* main.cpp: Core application logic and UI
-* InvestmentData.h / .cpp: Holds user input and investment parameters
-* DataCalculation.h / .cpp: Performs the enhanced compound interest calculations
-* resource.h / .rc: Contains GUI assets like icons and splash screen
-
-## Notes
-
-* The application includes a splash screen with fade-in and fade-out effects
-* A true dark mode is available, featuring dark gray backgrounds and light gray text
-* The application logic has been enhanced to align with advanced data structure and algorithm requirements
+Challenges included balancing responsiveness in the UI with intensive algorithms and ensuring numeric stability.
