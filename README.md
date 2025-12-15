@@ -110,7 +110,9 @@ For the capstone, this project was significantly expanded:
 
 
 
-- `main` branch: enhanced version
+- `main` branch: combination and documentation of releases
+
+- `enhanced-release` branch: enhanced version
 
 - `original-release` branch: original CS‑210 submission
 
