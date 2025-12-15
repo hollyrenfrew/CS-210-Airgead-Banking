@@ -18,8 +18,8 @@ The Airgead program works in a straightforward way:
 3.  DataCalculation takes these values and computes monthly compounding interest.
 4.  Two formatted yearly reports are printed:
 
--   One without monthly deposits.
--   One with monthly deposits.
+    - One without monthly deposits.
+    - One with monthly deposits.
 
 6.  The user is asked if they want to run another calculation.
 
@@ -27,19 +27,19 @@ The primary C++ files include:
 
 1. main.cpp
 
-- Controls the main loop, gets user input, calls the calculation, and asks if they want to continue.
+    - Controls the main loop, gets user input, calls the calculation, and asks if they want to continue.
 
 2. InvestmentData.cpp
 
-- Stores and retrieves all user inputs.
+    - Stores and retrieves all user inputs.
 
 3. UserInterface.cpp
 
-- Handles all input validation and formatting for prompts.
+    - Handles all input validation and formatting for prompts.
 
 4. DataCalculation.cpp
 
-- Runs the core compounding interest algorithm and prints the annual reports.
+    - Runs the core compounding interest algorithm and prints the annual reports.
 
 Overall, the program successfully performs the investment projections it was designed to do.
 
@@ -50,6 +50,8 @@ Code Review Analysis
 
 The structure is functional and clear. Each responsibility is separated into logical files. However, there are places where improvements are needed. For example, some code that belongs in validation functions is mixed directly into the user interaction loop. Screenshot this section:
 
+![get_initial_investment example](screenshots/get_initial_investment.png)
+
 *UserInterface.cpp*
 
 ### Documentation
@@ -58,6 +60,7 @@ The code is readable but lacks comments in key computational areas.
 
 A great example to screenshot is in DataCalculation.cpp, inside YearlyBalances. The calculation algorithm itself is not commented even though it is the core logic.
 
+![DataCalculation.cpp example](screenshots/documentation.png)
 
 *DataCalculation.cpp*
 
@@ -67,18 +70,25 @@ Variables are generally named well, but there are two concerns:
 
 1.  User input is stored in int amount, which restricts decimals even though currency inputs are often decimals.
 
+![example of in variable](screenshots/variables.png)
+
 *UserInterface.cpp*
 
 2.  Naming consistency can improve clarity, such as standardizing capitalization in getters (GetIntialInvestment has a typo, instead of Intial, it should be Initial).
 
+![original typo example](screenshots/naming_inconsistency.png)
+
 *DataCalculation.cpp*
+
 
 ### Loops and Branches
 
 Loop control is complete and logical, but readability could be improved by using early continues or extracting code into helper methods. There is a missing initializer in the for loop, which is a small correctness issue:
 
+![example of loop](screenshots/loop_example.png)
 
 *DataCalculation.cpp*
+
 
 ### Target Areas for Improvement
 
